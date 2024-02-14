@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const usersRoutes = require("./routes/usersRoutes");
+const cors = require("cors"); // Import CORS module
 
 const app = express();
 const port = 3000;
