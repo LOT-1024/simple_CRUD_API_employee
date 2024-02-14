@@ -5,6 +5,9 @@ const usersRoutes = require("./routes/usersRoutes");
 const app = express();
 const port = 3000;
 
+// Middleware to enable CORS
+app.use(cors());
+
 // Middleware to parse JSON bodies
 app.use(bodyParser.json());
 
