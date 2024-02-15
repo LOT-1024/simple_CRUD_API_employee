@@ -6,6 +6,8 @@ const getEmployeeById = require("./method/get/getEmployeeById");
 //  POST
 const postNewEmployee = require("./method/post/postNewEmployee");
 const postMarkAttendance = require("./method/post/postMarkAttendance");
+// #Login
+const login = require("./features/login");
 
 // PUT
 const putUpdateEmployee = require("./method/put/putUpdateEmployee");
@@ -25,4 +27,5 @@ module.exports = {
   postMarkAttendance,
   putUpdateAttendance,
   deleteEmployeeAttendance,
+  login,
 };

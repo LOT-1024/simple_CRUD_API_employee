@@ -7,6 +7,9 @@ const connection = mysql.createConnection({
   user: "root",
   password: "",
   database: "attendance_employee",
+  waitForConnections: true,
+  connectionLimit: 10,
+  queueLimit: 0,
 });
 
 connection.connect((err) => {
