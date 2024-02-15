@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 14, 2024 at 03:42 PM
+-- Generation Time: Feb 15, 2024 at 02:12 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 7.2.34
 
@@ -20,6 +20,25 @@ SET time_zone = "+00:00";
 --
 -- Database: `attendance_employee`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `id` int(11) NOT NULL,
+  `username` varchar(255) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`id`, `username`, `password`) VALUES
+(1, 'admin', '$2a$10$4NHoh/SAhGDfIViURxyqbuT0IQwjZrV86yKJsUOpwc4kmXMk50rr.');
 
 -- --------------------------------------------------------
 
@@ -72,6 +91,13 @@ INSERT INTO `employees` (`id`, `name`, `department`, `email`) VALUES
 --
 
 --
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `username` (`username`);
+
+--
 -- Indexes for table `attendance`
 --
 ALTER TABLE `attendance`
@@ -87,6 +113,12 @@ ALTER TABLE `employees`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `attendance`
